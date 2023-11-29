@@ -1,0 +1,53 @@
+@import "../../tools.scss";
+
+
+.wrapper__checkbox {
+    width: $sizePercent;
+    @include setFlex(flex, row, space-between, center);
+    @include setPadding(0 0 50px);
+
+    .header__checkbox {
+      flex: 2.5;
+      @include setMargin(0 10px 0 0);
+      @include setPadding(0 30px 0 0);
+      width: $sizePercent;
+      
+      @include setFlex(flex, row, flex-end, center);
+  
+      .checkbox__item {
+        @include setFlex(flex, row, flex-start, center);
+  
+        .select__input {
+          width: 20px;
+          height: 20px;
+          @include setMargin(0 10px 0 0);
+          cursor: pointer;
+        }
+  
+        label {
+          color: $totalColor;
+          cursor: pointer;
+        }
+      }
+    }
+    .checkbox__buttonbox {
+      flex: 1;
+
+      .checkbox__btn {
+        width: $sizePercent;
+        height: $size/2 + px;
+        cursor: pointer;
+        @include borderR(15px);
+        @include bor(0);
+        font-size: $textFontSize * 1.2;
+        font-weight: 600;
+        background-color: red;
+        color: $totalColor;
+
+        &:active {
+          background-color: darkred;
+          scale: 0.9;
+        }
+        }
+    }
+  }

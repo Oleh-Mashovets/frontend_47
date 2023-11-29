@@ -1,0 +1,51 @@
+$sizePercent: 100%;
+$size: 100; 
+$mainColor: #8B008B; 
+$primaryColor: #311455;
+$secondaryColor: #6600FF; 
+$secondaryColor2: #8c4ee9; 
+$secondaryColor3:#b28aec; 
+$specialyColor: rgb(107, 107, 107);
+$totalColor: #fff; 
+$titleFontSize: 2rem;
+$textFontSize: 1rem;
+
+
+@mixin setFlex ($dispFlex, $flexDir, $jusCon, $alItem) {
+    display: $dispFlex;
+    flex-direction: $flexDir;
+    justify-content: $jusCon;
+    align-items: $alItem;
+}
+
+@mixin setMargin ($setM) {
+    margin: $setM;
+}
+
+@mixin setPadding ($setP) {
+    padding: $setP;
+}
+
+@mixin bor ($bor) {
+    border: $bor;
+}
+
+@mixin borderR ($br) {
+    border-radius: $br;
+}
+
+@mixin position ($pos) {
+    position: $pos;
+}
+
+@mixin way ($top, $right, $bottom, $left) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@font-face {
+    font-family: "Closer Mint type Regular";
+    src: url(../src/assets/fonts/MINT_TYPE_CLOSER_REGULAR.OTF);
+}
