@@ -53,8 +53,8 @@ export default function ShowList() {
   return (
     <div className="list__todo">
       <CheckItem/>
-      {loading && <h2>Loading...</h2>}
-      {error && <h2>{error}</h2>}
+      {loading && <h2 className="loading">Loading...</h2>}
+      {error && <h2 className="error">{error}</h2>}
       {list.map(({ id, taskname, status }) => (
         <div className={`wrapper__item ${editableId === id ? "editing" : ""}`} key={id}>
           <div className="item__check">

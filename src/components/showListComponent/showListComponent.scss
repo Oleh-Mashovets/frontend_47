@@ -169,4 +169,8 @@
       }
     }
   }
+  .loading, .error {
+    font-size: 1.4rem;
+    color: $totalColor;
+  }
 }

@@ -6,7 +6,6 @@ export const fetchList = createAsyncThunk(
   async function(_, {rejectWithValue}) {
     try {
       const response = await fetch('https://656722ee64fcff8d730fcd60.mockapi.io/todos');
-      console.log(response)
       const data = await response.json();
       
       if(!response.ok) {
@@ -69,8 +68,7 @@ const todoSlice = createSlice({
     },
   },
   extraReducers: {
-    [fetchList.pending]: (state, action) => {
-      console.log(action);
+    [fetchList.pending]: (state) => {
       state.loading = true;
     },
     [fetchList.fulfilled]: (state, action) => {
